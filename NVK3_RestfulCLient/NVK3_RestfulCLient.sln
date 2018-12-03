@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVK3_RestfulCLient", "NVK3_RestfulCLient\NVK3_RestfulCLient.csproj", "{3E80EC22-5739-4EB3-B060-74A359A4A514}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVK3_RestfulClient", "NVK3_RestfulCLient\NVK3_RestfulClient.csproj", "{3E80EC22-5739-4EB3-B060-74A359A4A514}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALRESTfulUtil", "..\DALRESTfulUtil\DALRESTfulUtil.csproj", "{6065A6F1-2896-44D9-874D-1D018B580F23}"
 EndProject
