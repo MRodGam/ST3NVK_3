@@ -16,6 +16,8 @@ namespace NVK3_RestfulClient
             VenueServiceUtilJSON testVenue = new VenueServiceUtilJSON("venueserviceaseece.azurewebsites.net","","venueservice");
 
             testVenue.GetConcertHall();
+            testVenue.PostConcertHall();
+            testVenue.DeleteEquipment();
 
             Console.ReadLine();
         }
