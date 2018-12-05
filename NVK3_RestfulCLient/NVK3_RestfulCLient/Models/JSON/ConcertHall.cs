@@ -16,7 +16,7 @@ namespace NVK3_RestfulCLient.Models.JSON
         public float StagesizeM2 { get; set; }
         public int MaxNoAudience { get; set; }
         public int NoOfDoors { get; set; }
-        public  List<ConcertEquipment> Equipment { get; set; }
-    
+        public List<Equipment> Equipment { get; set; }
+
     }
 }
