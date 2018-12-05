@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Models\JSON\ConcertEquipment.cs" />
+    <Compile Include="Models\JSON\Event.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Models\JSON\Equipment.cs" />
     <Compile Include="Models\JSON\ConcertHall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\JSON\VenueServiceUtilJSON.cs" />
@@ -50,6 +51,12 @@
   <ItemGroup>
     <Folder Include="Models\XML\" />
     <Folder Include="Util\XML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DALRESTfulUtil\DALRESTfulUtil.csproj">
+      <Project>{6065a6f1-2896-44d9-874d-1d018b580f23}</Project>
+      <Name>DALRESTfulUtil</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

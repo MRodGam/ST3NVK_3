@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NVK3_RestfulCLient.Models.JSON
 {
-    class ConcertEquipment
+    class Equipment
     {
         public int EquipmentId { get; set; }
         public string EquipmentName { get; set; }
