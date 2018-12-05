@@ -25,9 +25,14 @@ namespace NVK3_RestfulCLient.Util.JSON
 
         public List<ConcertHall> GetConcertHall()
         {
-            APIGetJSON<List<ConcertHall>> getconcerthall = new APIGetJSON<List<ConcertHall>>(this.fullservicepath + "Concert Hall");
+            APIGetJSON<List<ConcertHall>> getconcerthall = new APIGetJSON<List<ConcertHall>>(this.fullservicepath + "ConcertHalls");
             return getconcerthall.data;
         }
 
+        public ConcertHall PostConcertHall( ConcertHall postedHall)
+        {
+            APIPostJSON<ConcertHall> postconcerthall = new APIPostJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls", postedHall);
+            return postconcerthall.data;
+        }
     }
 }
