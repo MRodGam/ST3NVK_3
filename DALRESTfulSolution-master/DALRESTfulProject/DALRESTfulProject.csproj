@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E80EC22-5739-4EB3-B060-74A359A4A514}</ProjectGuid>
+    <ProjectGuid>{211E1F32-FC75-4314-B523-C4953133277B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NVK3_RestfulCLient</RootNamespace>
-    <AssemblyName>NVK3_RestfulCLient</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>DALRESTfulProject</RootNamespace>
+    <AssemblyName>DALRESTfulProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,15 +24,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,25 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\JSON\Event.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Models\JSON\Equipment.cs" />
-    <Compile Include="Models\JSON\ConcertHall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\JSON\VenueServiceUtilJSON.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\XML\" />
-    <Folder Include="Util\XML\" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DALRESTfulUtil\DALRESTfulUtil.csproj">
+    <ProjectReference Include="..\DALRESTfulUtil\DALRESTfulUtil.csproj">
       <Project>{6065a6f1-2896-44d9-874d-1d018b580f23}</Project>
       <Name>DALRESTfulUtil</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
