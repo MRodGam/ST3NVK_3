@@ -19,4 +19,5 @@ namespace NVK3_RestfulCLient.Models.JSON
         public List<Equipment> Equipment { get; set; }
 
     }
+
 }
