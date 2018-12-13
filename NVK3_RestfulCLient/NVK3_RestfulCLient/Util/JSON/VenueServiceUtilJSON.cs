@@ -31,13 +31,13 @@ namespace NVK3_RestfulCLient.Util.JSON
 
         public ConcertHall PostConcertHall(ConcertHall postedHall) // Den her giver fejl
         {
-            APIPostJSON<ConcertHall> postconcerthall = new APIPostJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls", postedHall);
+            APIPostJSON<ConcertHall> postconcerthall = new APIPostJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls/" + postedHall.ConcertHallId, postedHall);
             return postconcerthall.data;
         }
 
         public ConcertHall DeleteConcertHall(ConcertHall deletedHall) // Den her giver fejl
         {
-            APIDeleteJSON<ConcertHall> deleteconcerthall = new APIDeleteJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls", deletedHall);
+            APIDeleteJSON<ConcertHall> deleteconcerthall = new APIDeleteJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls/"+ deletedHall.ConcertHallId, deletedHall);
             return deleteconcerthall.data;
         }
 

@@ -15,10 +15,12 @@ namespace NVK3_RestfulClient
         static void Main(string[] args)
         {
             VenueServiceUtilJSON testVenue = new VenueServiceUtilJSON("venueserviceaseece.azurewebsites.net","","venueservice");
-            ConcertHall testConcertHall = new ConcertHall();
-            Equipment testEquipment = new Equipment();
+            List<Equipment> testEquipment= new List<Equipment>();
+            ConcertHall testConcertHall = new ConcertHall(0000,"Voxhall","Aarhus","Jonas Jensen", 400,50,300,5,testEquipment);
 
-            testVenue.GetConcertHall();
+            testConcertHall = testVenue.PostConcertHall(testConcertHall);
+            List<ConcertHall> testList = testVenue.GetConcertHall();
+
             //testVenue.PostConcertHall(testConcertHall);
             //testVenue.DeleteConcertHall(testConcertHall);
             //testVenue.PutConcertHall(testConcertHall);
