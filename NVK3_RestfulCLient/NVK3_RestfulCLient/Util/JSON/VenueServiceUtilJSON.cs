@@ -29,15 +29,15 @@ namespace NVK3_RestfulCLient.Util.JSON
             return getconcerthall.data;
         }
 
-        public ConcertHall PostConcertHall(ConcertHall postedHall)
+        public ConcertHall PostConcertHall(ConcertHall postedHall) // Den her giver fejl
         {
             APIPostJSON<ConcertHall> postconcerthall = new APIPostJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls", postedHall);
             return postconcerthall.data;
         }
 
-        public ConcertHall DeleteConcertHall(ConcertHall deletedHall)
+        public ConcertHall DeleteConcertHall(ConcertHall deletedHall) // Den her giver fejl
         {
-            APIDeleteJSON<ConcertHall> deleteconcerthall = new APIDeleteJSON<ConcertHall>(this.hostname, this.servicepath + "ConcetHalls", deletedHall);
+            APIDeleteJSON<ConcertHall> deleteconcerthall = new APIDeleteJSON<ConcertHall>(this.hostname, this.servicepath + "ConcertHalls", deletedHall);
             return deleteconcerthall.data;
         }
 
@@ -49,13 +49,13 @@ namespace NVK3_RestfulCLient.Util.JSON
 
         public Equipment PutEquipment(Equipment placedEquipment)
         {
-            APIPutJSON<Equipment> putequiment = new APIPutJSON<Equipment>(this.hostname, this.servicepath + "ConcertEquipment", placedEquipment);
+            APIPutJSON<Equipment> putequiment = new APIPutJSON<Equipment>(this.hostname, this.servicepath + "ConcertEquipments", placedEquipment);
             return putequiment.data;
         }
 
         public Equipment DeleteEquipment(Equipment deletedEquipment)
         {
-            APIDeleteJSON<Equipment> deleteequipment = new APIDeleteJSON<Equipment>(this.hostname, this.servicepath + "ConcertEquipment", deletedEquipment);
+            APIDeleteJSON<Equipment> deleteequipment = new APIDeleteJSON<Equipment>(this.hostname, this.servicepath + "ConcertEquipments", deletedEquipment);
             return deleteequipment.data;
         }
 
