@@ -14,5 +14,15 @@ namespace NVK3_RestfulCLient.Models.JSON
         public string FactoryName { get; set; }
         public int EquipmentCount { get; set; }
         public string BelongsToConcertHall { get; set; }
+
+        public Equipment(int id, string name, string description, string factory, int equipmentnr, string belongsto)
+        {
+            EquipmentId = id;
+            EquipmentName = name;
+            Description = description;
+            FactoryName = factory;
+            EquipmentCount = equipmentnr;
+            BelongsToConcertHall = belongsto;
+        }
     }
 }
