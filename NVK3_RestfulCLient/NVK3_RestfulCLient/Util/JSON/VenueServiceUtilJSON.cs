@@ -70,12 +70,6 @@ namespace NVK3_RestfulCLient.Util.JSON
             APIDeleteJSON<Equipment> deleteequipment = new APIDeleteJSON<Equipment>(this.hostname, this.servicepath + "ConcertEquipments/"+deletedEquipment.EquipmentId, deletedEquipment);
             return deleteequipment.data;
         }
-
-        public Event GetEvent()
-        {
-            APIGetJSON<Event> getevent = new APIGetJSON<Event>(this.fullservicepath + "Events");
-            return getevent.data;
-        }
     }
 }
 

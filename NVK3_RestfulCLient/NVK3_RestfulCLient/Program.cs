@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NVK3_RestfulCLient.Util.JSON;
 using DALRESTfulUtil.HttpClientJson;
-using NVK3_RestfulCLient.Models.JSON;
+using NVK3_RestfulCLient.Models.JSON;         // Indkommentér til JSON Test
 
 namespace NVK3_RestfulClient
 {
@@ -23,22 +23,25 @@ namespace NVK3_RestfulClient
             //1. Opret 2 koncertsale
             List<Equipment> testEquipment1 = new List<Equipment>();
             ConcertHall testConcertHall1 = new ConcertHall(0000, "Voxhall", "Aarhus", "Jonas Jensen", 400, 50, 300, 5, testEquipment1);
+          
 
             List<Equipment> testEquipment2 = new List<Equipment>();
-            ConcertHall testCocertHall2 = new ConcertHall(0001, "Boxen","Herning", "Marie Jeppesen", 3000,100,10000,20,testEquipment2);
+            ConcertHall testConcertHall2 = new ConcertHall(0001, "Boxen","Herning", "Marie Jeppesen", 3000,100,10000,20,testEquipment2);
 
 
             testConcertHall1 = testVenue.PostConcertHall(testConcertHall1);
             List<ConcertHall> testList1 = testVenue.GetConcertHall();
             //201
 
-            testCocertHall2 = testVenue.PostConcertHall(testCocertHall2);
+            testConcertHall2 = testVenue.PostConcertHall(testConcertHall2);
             List<ConcertHall> testList2 = testVenue.GetConcertHall();
             //201
 
             // 2. Opret og tilknyt 4 stykker udstyr til de to koncertsale
             List<Equipment> testEquipment3 = new List<Equipment>();
             ConcertHall testConcertHall3 = new ConcertHall(0303, "O2 Arena", "Berlin", "Jane Wilson", 5000, 300, 20000, 50, testEquipment3);
+            testConcertHall3.ConcertHallId = 0303;
+
             Equipment a = new Equipment(0, "Gibson", "Elektrisk guitar", "Gibson", 1000, "O2 Arena"); 
             Equipment b = new Equipment(0, "Gibson", "Elektrisk guitar", "Gibson", 1100, "O2 Arena");
             testConcertHall3.Equipment.Add(a);
@@ -49,6 +52,8 @@ namespace NVK3_RestfulClient
 
             List<Equipment> testEquipment4 = new List<Equipment>();
             ConcertHall testConcertHall4 = new ConcertHall(0091, "Bodegaen", "Bramming", "Ida Martinsen", 87, 0, 100, 3, testEquipment4);
+            testConcertHall4.ConcertHallId = 0091;
+
             Equipment c = new Equipment(0, "Fender", "Akkustisk guitar", "Fender", 0001, "Bodegaen");
             Equipment d = new Equipment(0, "Yamaha", "Keyboard", "Yamaha", 0500, "Bodegaen");
             testConcertHall4.Equipment.Add(c);
@@ -56,6 +61,7 @@ namespace NVK3_RestfulClient
 
             testVenue.PutConcertHall(testConcertHall4);
             //201
+
 
 
             // 3. Slet et styk udstyr fra etn koncerthal
@@ -72,6 +78,7 @@ namespace NVK3_RestfulClient
             c.EquipmentId = 500;
             c.EquipmentName = "Tamborin";
             testVenue.PutEquipment(c);
+
             //204
 
             //5. Slet en koncerthal og dens udstyr

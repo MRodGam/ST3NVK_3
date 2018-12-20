@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVK3_RestfulClient", "NVK3_RestfulCLient\NVK3_RestfulClient.csproj", "{3E80EC22-5739-4EB3-B060-74A359A4A514}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulClientJSON", "NVK3_RestfulCLient\RestfulClientJSON.csproj", "{3E80EC22-5739-4EB3-B060-74A359A4A514}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALRESTfulUtil", "..\DALRESTfulSolution-master\DALRESTfulUtil\DALRESTfulUtil.csproj", "{6065A6F1-2896-44D9-874D-1D018B580F23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulClientXML", "RestfulClientXML\RestfulClientXML.csproj", "{EFEDAFEF-9E6F-4007-B4A1-120DB73FF7FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6065A6F1-2896-44D9-874D-1D018B580F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6065A6F1-2896-44D9-874D-1D018B580F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6065A6F1-2896-44D9-874D-1D018B580F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEDAFEF-9E6F-4007-B4A1-120DB73FF7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEDAFEF-9E6F-4007-B4A1-120DB73FF7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEDAFEF-9E6F-4007-B4A1-120DB73FF7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEDAFEF-9E6F-4007-B4A1-120DB73FF7FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
